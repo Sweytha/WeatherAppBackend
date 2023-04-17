@@ -20,6 +20,7 @@ jobs:
       - name: Build and test with Maven
         env:
           SPRING_PROFILES_ACTIVE: test
+          TZ: America/Toronto
         run: mvn -B clean test --file pom.xml
 
       - name: Publish test results
