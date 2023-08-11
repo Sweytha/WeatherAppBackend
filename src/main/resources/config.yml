@@ -11,7 +11,7 @@ jwt:
     /user/signup,
     /user/reset/*,
     /test/**,
-    /error,
+    /error
     
 # Open Weather API Configuration  
 api:
@@ -29,3 +29,12 @@ client:
     reset: 
       param: reset
       expiration: 600_000 # 10 minutes 
+      
+      
+# H2 Server Configuration 
+h2.server:
+  params: >
+    -tcp, 
+    -tcpAllowOthers, 
+    -tcpPort, 
+    9091

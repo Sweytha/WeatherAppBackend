@@ -48,6 +48,15 @@ public class ResourceProvider {
 
     @Value("${client.email.reset.expiration}")
     private long clientResetExpiration;
+    
+	@Value("${spring.jackson.time-zone}")
+	private String timeZone;
+
+	@Value("${spring.jackson.date-format}")
+	private String dateFormat;
+
+	@Value("${h2.server.params}")
+	private String[] h2ServerParams;
 
 	public String getJwtSecret() {
 		return jwtSecret;
@@ -100,7 +109,20 @@ public class ResourceProvider {
 	public long getClientResetExpiration() {
 		return clientResetExpiration;
 	}
-    
+
+	public String getTimeZone() {
+		return timeZone;
+	}
+
+	public String getDateFormat() {
+		return dateFormat;
+	}
+
+	public String[] getH2ServerParams() {
+		return h2ServerParams;
+	}
+
+	
     
 
 }
